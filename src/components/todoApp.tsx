@@ -3,11 +3,6 @@ import React, { useState } from 'react';
 import { TodoAppInput } from './todoAppInput';
 import { RenderOneTodo } from './renderOneTodo';
 
-interface todoElement {
-  text: string;
-  isCompleted: boolean;
-}
-
 export const TodoApp = () => {
   const initialTodoList = [
     { text: "Learn about React",
