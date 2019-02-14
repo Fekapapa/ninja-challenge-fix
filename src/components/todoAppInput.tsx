@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 
-export const TodoAppInput = (addTodo: (text: string) => void) => {
+type Props = {
+	addTodo: (text: string) => void
+};
+
+
+export const TodoAppInput = (props: Props) => {
 	const [inputValue, setInputValue] = useState("");
 
 	const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
+		const { addTodo } = props;
 		event.preventDefault();
 
 		addTodo(inputValue);

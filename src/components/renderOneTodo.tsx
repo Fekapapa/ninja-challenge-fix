@@ -12,7 +12,11 @@ interface TodoParameters {
 	removeTodo: (index: number) => void;
 }
 
-export const RenderOneTodo = ({ todo, index, completeTodo, removeTodo }: TodoParameters) => {
+type Props = TodoParameters;
+
+export const RenderOneTodo = (props: Props) => {
+	const {index, todo, completeTodo, removeTodo} = props;
+	
 	return (
 		<div
 			className="todo"
